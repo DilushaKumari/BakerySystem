@@ -1,0 +1,109 @@
+.jfx-combo-box {
+    -fx-font-size: 14;
+}
+
+/*.jfx-combo-box .text-field {*/
+    /*-fx-prompt-text-fill: #580D70 ;*/
+
+/*}*/
+.jfx-time-picker{
+    -fx-prompt-text-fill: #580D70 ;
+    -fx-font-size: 14;
+
+}
+.no-prompt {
+    -fx-prompt-text-fill: #580D70 !important;
+}
+/*.jfx-time-picker > .jfx-text-field { -fx-font-size: 14px;*/
+    /*-fx-text-fill: #580D70;*/
+/*}*/
+
+
+.table-view .column-header .label {
+    -fx-font-size: 14px;
+    -fx-font-weight:bold;
+    -fx-text-fill: #580D70;
+    -fx-background-color: #e0d4ff;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+
+.table-cell {
+    -fx-font-size: 14px;
+    -fx-text-fill: #580d70;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color:  #C295EB;
+
+}
+
+/*.root {*/
+    /*-fx-font: 11 Tahoma;*/
+    /*-fx-text-fill: black;*/
+/*}*/
+
+/*.text {*/
+    /*-fx-text-fill: #F00;*/
+    /*-fx-font-smoothing-type: lcd;*/
+/*}*/
+
+
+.combo-box-base{
+    -fx-background-color: #C295EB;
+    -fx-padding: 2 2;
+    -fx-text-fill:#580D70;
+}
+
+.combo-box-base > .arrow-button {
+    -fx-background-color:  #580D70;
+    -fx-padding: 0 4;
+}
+
+
+
+.combo-box-popup > .list-view {
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-border-color: #580D70;
+    -fx-background-color: #580D70;
+
+    -fx-text-fill: #580D70;
+    /*-fx-background-insets: 0, 1;*/
+}
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
+    -fx-padding: 1 10;
+    -fx-background: #C295EB;
+    -fx-text-fill: #580D70;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected {
+    -fx-background: #580D70;
+    -fx-background-color: #e0d4ff !important;
+    -fx-text-fill: #580D70;
+    -fx-font-weight:bold;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover,
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover {
+    -fx-background-color: #e0d4ff !important;
+}
+
+.combo-box-base > .arrow-button > .arrow {
+    -fx-background-color: #e0d4ff;
+    -fx-padding: 2 4;
+    -fx-shape: "M 0 0 H 7 L 3.5 4 z";}
+
+
+.combo-box-base:editable > .text-field {
+    -fx-border-image-source: null;
+    -fx-background-color: transparent;
+    -fx-padding: 1 0;
+    -fx-text-fill: #580D70;
+}
+.combo-box .list-cell{
+    -fx-font-size: 14px;
+    -fx-text-fill:#580D70;
+}
+/**/

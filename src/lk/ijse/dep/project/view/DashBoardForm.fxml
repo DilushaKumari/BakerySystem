@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainWindow" prefHeight="532.0" prefWidth="645.0" style="-fx-background-color: #6d2292;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.project.controller.DashBoardFormController">
+   <children>
+      <ImageView fitHeight="216.0" fitWidth="222.0" layoutX="212.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/logo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgAssign" fitHeight="69.0" fitWidth="69.0" layoutX="565.0" layoutY="292.0" onMouseClicked="#navigate" onMouseEntered="#playEnterAction" onMouseExited="#playExitAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/assigning.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="167.0" layoutY="169.0" prefHeight="78.0" prefWidth="375.0" text="ABC Bakery Shop" textFill="#e0d4ff">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgRecipe" fitHeight="69.0" fitWidth="69.0" layoutX="15.0" layoutY="299.0" onMouseClicked="#navigate" onMouseEntered="#playEnterAction" onMouseExited="#playExitAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/recipe.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgEmployee" fitHeight="78.0" fitWidth="69.0" layoutX="10.0" layoutY="73.0" onMouseClicked="#navigate" onMouseEntered="#playEnterAction" onMouseExited="#playExitAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/employee.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgIngredient" fitHeight="69.0" fitWidth="63.0" layoutX="23.0" layoutY="188.0" onMouseClicked="#navigate" onMouseEntered="#playEnterAction" onMouseExited="#playExitAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/ing.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgTask" fitHeight="86.0" fitWidth="69.0" layoutX="564.0" layoutY="66.0" onMouseClicked="#navigate" onMouseEntered="#playEnterAction" onMouseExited="#playExitAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/addTask.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgProcessTask" fitHeight="78.0" fitWidth="69.0" layoutX="566.0" layoutY="175.0" onMouseClicked="#navigate" onMouseEntered="#playEnterAction" onMouseExited="#playExitAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/task%20processing.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgViewTask" fitHeight="69.0" fitWidth="69.0" layoutX="564.0" layoutY="409.0" onMouseClicked="#navigate" onMouseEntered="#playEnterAction" onMouseExited="#playExitAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/viewTask.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgProduct" fitHeight="69.0" fitWidth="69.0" layoutX="14.0" layoutY="410.0" onMouseClicked="#navigate" onMouseEntered="#playEnterAction" onMouseExited="#playExitAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/product.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblMainText" alignment="CENTER" contentDisplay="CENTER" layoutX="158.0" layoutY="436.0" prefHeight="38.0" prefWidth="313.0" textFill="#eec1dd">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSubText" alignment="CENTER" contentDisplay="CENTER" layoutX="104.0" layoutY="474.0" prefHeight="38.0" prefWidth="450.0" textFill="#eec1dd">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnBackup" layoutX="197.0" layoutY="251.0" onAction="#btnBackup_OnAction" prefHeight="31.0" prefWidth="69.0" style="-fx-background-color: #e0d4ff;" text="Backup" textOverrun="CENTER_ELLIPSIS" />
+      <JFXButton fx:id="btnRestore" layoutX="280.0" layoutY="251.0" onAction="#btnRestore_OnAction" prefHeight="31.0" prefWidth="69.0" style="-fx-background-color: #e0d4ff;" text="Restore" textOverrun="CENTER_ELLIPSIS" />
+      <JFXButton fx:id="btnLogout" layoutX="365.0" layoutY="251.0" onAction="#btnLogout_OnAction" prefHeight="31.0" prefWidth="69.0" style="-fx-background-color: #e0d4ff;" text="Logout" textOverrun="CENTER_ELLIPSIS" />
+      <ProgressIndicator fx:id="pgb" layoutX="275.0" layoutY="38.0" prefHeight="104.0" prefWidth="90.0" />
+   </children>
+</AnchorPane>

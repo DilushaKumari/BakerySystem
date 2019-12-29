@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="assigningEmployeeForm" prefHeight="690.0" prefWidth="753.0" style="-fx-background-color: #C295EB;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.project.controller.AssigningEmployeeFormController">
+    <children>
+      <HBox layoutX="-92.0" layoutY="-3.0" prefHeight="71.0" prefWidth="845.0" style="-fx-background-color: #580D70;" />
+      <Label contentDisplay="CENTER" layoutX="21.0" layoutY="18.0" text="Assigning Employee" textFill="#e0d4ff">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgHome" fitHeight="53.0" fitWidth="40.0" layoutX="684.0" layoutY="15.0" onMouseClicked="#imgHome_OnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnIn" layoutX="449.0" layoutY="144.0" onAction="#btnIn_OnAction" prefHeight="34.0" prefWidth="113.0" style="-fx-background-color: #580D70;" text="In" textFill="#e0d4ff">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbEmployeeId" focusColor="#580d70" layoutX="29.0" layoutY="147.0" prefHeight="25.0" prefWidth="241.0" promptText="Employee Id" style="-fx-prompt-text-fill: #580D70;" stylesheets="@style.css" unFocusColor="#580d70" />
+      <Separator layoutX="29.0" layoutY="247.0" prefHeight="19.0" prefWidth="671.0" />
+      <JFXComboBox fx:id="cmbProcessingTaskId" focusColor="#580d70" layoutX="31.0" layoutY="266.0" prefHeight="25.0" prefWidth="241.0" promptText="Processing Task Id" style="-fx-prompt-text-fill: #580D70;" stylesheets="@style.css" unFocusColor="#580d70" />
+      <TableView fx:id="tblAssigning" layoutX="38.0" layoutY="484.0" prefHeight="179.0" prefWidth="678.0" style="-fx-color: #e0d4ff; -fx-background-color: #C295EB;" stylesheets="@style.css">
+         <columns>
+            <TableColumn prefWidth="96.0" text="Employeee Id" />
+            <TableColumn prefWidth="76.0" text="Task Id" />
+            <TableColumn prefWidth="108.0" text="Date" />
+            <TableColumn prefWidth="198.0" text="Start Time" />
+            <TableColumn prefWidth="197.0" text="Finish Time" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnAssign" layoutX="450.0" layoutY="324.0" onAction="#btnAssign_OnAction" prefHeight="34.0" prefWidth="113.0" style="-fx-background-color: #580D70;" text="Assign" textFill="#e0d4ff">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtName" focusColor="#580d70" layoutX="29.0" layoutY="202.0" prefHeight="28.0" prefWidth="232.0" promptText="Employee Name" style="-fx-text-inner-color: #580D70; -fx-prompt-text-fill: #580D70; -fx-font-size: 14;" unFocusColor="#580d70" />
+      <JFXTextField fx:id="txtDate" focusColor="#580d70" layoutX="29.0" layoutY="92.0" prefHeight="28.0" prefWidth="232.0" promptText="Date" style="-fx-text-inner-color: #580D70; -fx-prompt-text-fill: #580D70; -fx-font-size: 14; -fx-font-weight: bold;" unFocusColor="#580d70" />
+      <JFXButton fx:id="btnOut" layoutX="450.0" layoutY="206.0" onAction="#btnOut_OnAction" prefHeight="34.0" prefWidth="113.0" style="-fx-background-color: #580D70;" text="Out" textFill="#e0d4ff">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTimePicker fx:id="txtStartTime" defaultColor="#580d70" editable="true" layoutX="35.0" layoutY="325.0" prefHeight="28.0" prefWidth="241.0" promptText="Start Time" style="-fx-font-size: 14; -fx-prompt-text-fill: #580D70; -fx-text-inner-color: #580D70;" />
+      <JFXTimePicker fx:id="txtStopTime" defaultColor="#580d70" editable="true" layoutX="39.0" layoutY="379.0" prefHeight="28.0" prefWidth="241.0" promptText="Stop Time" style="-fx-font-size: 14; -fx-prompt-text-fill: #580D70; -fx-text-inner-color: #580D70;" />
+      <JFXButton fx:id="btnRemove" layoutX="450.0" layoutY="377.0" onAction="#btnRemove_OnAction" prefHeight="34.0" prefWidth="113.0" style="-fx-background-color: #580D70;" text="Release" textFill="#e0d4ff">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtSearch" focusColor="#580d70" layoutX="39.0" layoutY="439.0" prefHeight="28.0" prefWidth="241.0" promptText="Search" style="-fx-text-inner-color: #580D70; -fx-prompt-text-fill: #580D70; -fx-font-size: 14;" unFocusColor="#580d70" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="task_sub_member" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="30764590-955c-4a79-965b-3fee06f70df9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="sub_task_id" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT bakery.employeeassign.`empId`,
+	bakery.employeeassign.`startTime`,
+	bakery.employeeassign.`finishTime`,
+	bakery.employee.`empName`
+FROM bakery.employeeassign
+	INNER JOIN bakery.employee ON 
+	 bakery.employeeassign.`empId` = bakery.employee.`empId`
+	 WHERE taskId=$P{sub_task_id}]]>
+	</queryString>
+	<field name="empId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="empId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employeeassign"/>
+	</field>
+	<field name="startTime" class="java.sql.Time">
+		<property name="com.jaspersoft.studio.field.label" value="startTime"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employeeassign"/>
+	</field>
+	<field name="finishTime" class="java.sql.Time">
+		<property name="com.jaspersoft.studio.field.label" value="finishTime"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employeeassign"/>
+	</field>
+	<field name="empName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="empName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="20" uuid="584f5a0c-a3c8-4513-afb1-528b10fc04f5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b4d9ec3b-312f-4063-9295-eaa88e0efa22"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[empId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="0" width="150" height="20" uuid="a6774c66-a13c-4cda-a869-9cd95c6f9a8b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="85816b16-130e-4135-b5d1-3609b0970cef"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[empName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="0" width="100" height="20" uuid="b9a106cd-a7e0-4099-b77d-16e37011fed1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fa88c33b-8a1f-4160-b260-92a67ece64f9"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[startTime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="0" width="100" height="20" uuid="9467fbfa-68b2-46a0-833c-04e905e866e0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4ca30b29-50ed-4dfb-a3b2-cffe61f429a5"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[finishTime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="0" width="100" height="20" uuid="4cbaec06-1eba-4a3e-891c-7f342aeecd86">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4ca30b29-50ed-4dfb-a3b2-cffe61f429a5"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. of Hours]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="80" height="20" uuid="1cbbe20f-93db-48c9-8972-b8146af2441d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b4d9ec3b-312f-4063-9295-eaa88e0efa22"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{empId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="150" height="20" uuid="0fd59885-fb9b-4081-8c19-0ca2f14e93cc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="85816b16-130e-4135-b5d1-3609b0970cef"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{empName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="0" width="100" height="20" uuid="25a024d3-9ff9-455b-ae55-a2406523457e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fa88c33b-8a1f-4160-b260-92a67ece64f9"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat(" hh:mm a").format($F{startTime})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="100" height="20" uuid="06792fd9-0d2e-4507-8a3f-56089dfb5168">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4ca30b29-50ed-4dfb-a3b2-cffe61f429a5"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat(" hh:mm a").format($F{finishTime})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="0" width="100" height="20" uuid="fff96efa-02ad-4c7f-b3d1-dd217c07a676">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4ca30b29-50ed-4dfb-a3b2-cffe61f429a5"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[new DecimalFormat("#.##").format(ABS($F{finishTime}.getTime()-$F{startTime}.getTime() ).doubleValue()/3600000)]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

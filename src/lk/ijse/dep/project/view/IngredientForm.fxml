@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ingredientForm" prefHeight="500.0" prefWidth="791.0" style="-fx-background-color: #C295EB;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.project.controller.IngredientFormController">
+    <children>
+      <HBox layoutX="-54.0" layoutY="-3.0" prefHeight="81.0" prefWidth="845.0" style="-fx-background-color: #580D70;" />
+      <JFXTextField fx:id="txtDescription" focusColor="#580d70" layoutX="12.0" layoutY="232.0" prefHeight="28.0" prefWidth="246.0" promptText="Description" style="-fx-text-inner-color: #580D70; -fx-prompt-text-fill: #580D70; -fx-font-size: 14;" unFocusColor="#580d70" />
+      <Label contentDisplay="CENTER" layoutX="18.0" layoutY="12.0" text="Ingredient Management" textFill="#e0d4ff">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgHome" fitHeight="40.0" fitWidth="41.0" layoutX="725.0" layoutY="18.0" onMouseClicked="#imgHome_OnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtQty" focusColor="#580d70" layoutX="12.0" layoutY="298.0" prefHeight="28.0" prefWidth="246.0" promptText="Hand on Quantity" style="-fx-text-inner-color: #580D70; -fx-prompt-text-fill: #580D70; -fx-font-size: 14;" unFocusColor="#580d70">
+         <tooltip>
+            <Tooltip fx:id="ttQty" text="Empty Tooltip" />
+         </tooltip></JFXTextField>
+      <JFXTextField fx:id="txtIngredient" focusColor="#580d70" layoutX="15.0" layoutY="168.0" prefHeight="28.0" prefWidth="246.0" promptText="Ingredient Id" style="-fx-text-inner-color: #580D70; -fx-prompt-text-fill: #580D70; -fx-font-size: 14;" unFocusColor="#580d70" />
+      <JFXTextField fx:id="txtSearch" focusColor="#580d70" layoutX="550.0" layoutY="114.0" prefHeight="28.0" prefWidth="232.0" promptText="Search" style="-fx-text-inner-color: #580D70; -fx-prompt-text-fill: #580D70; -fx-font-size: 14;" unFocusColor="#580d70" />
+      <TableView fx:id="tblIngredient" layoutX="272.0" layoutY="173.0" prefHeight="307.0" prefWidth="505.0" style="-fx-background-color: #C295EB; -fx-color: #E0D4FF;" stylesheets="@style.css">
+        <columns>
+          <TableColumn prefWidth="114.0" style="-fx-text-fill: #580D70; -fx-font-size: 14;" text="Ingredient Id" />
+          <TableColumn prefWidth="283.0" style="-fx-font-size: 14; -fx-text-fill: #580D70;" text="Description" />
+            <TableColumn minWidth="0.0" prefWidth="105.0" style="-fx-alignment: CENTER_RIGHT;" text="Quantity" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnSave" layoutX="12.0" layoutY="433.0" onAction="#btnSave_OnAction" prefHeight="41.0" prefWidth="75.0" style="-fx-background-color: #580D70;" text="Save" textFill="#e0d4ff">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="94.0" layoutY="433.0" onAction="#btnDelete_OnAction" prefHeight="41.0" prefWidth="75.0" style="-fx-background-color: #580D70;" text="Delete" textFill="#e0d4ff">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnPrint" layoutX="179.0" layoutY="434.0" onAction="#btnPrint_OnAction" prefHeight="41.0" prefWidth="75.0" style="-fx-background-color: #580D70;" text="Print" textFill="#e0d4ff">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="imgAdd" fitHeight="41.0" fitWidth="48.0" layoutX="648.0" layoutY="17.0" onMouseClicked="#imgAdd_OnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/add%20ingredient.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

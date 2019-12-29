@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="processingTaskForm" prefHeight="590.0" prefWidth="741.0" style="-fx-background-color: #C295EB;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.project.controller.ProcessingTaskFromController">
+    <children>
+      <HBox layoutX="-92.0" layoutY="-3.0" prefHeight="66.0" prefWidth="833.0" style="-fx-background-color: #580D70;" />
+      <Label contentDisplay="CENTER" layoutX="21.0" layoutY="9.0" text="Processing Task" textFill="#e0d4ff">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgHome" fitHeight="41.0" fitWidth="47.0" layoutX="677.0" layoutY="8.0" onMouseClicked="#imgHome_OnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnProcess" layoutX="452.0" layoutY="91.0" onAction="#btnProcess_OnAction" prefHeight="41.0" prefWidth="113.0" style="-fx-background-color: #580D70;" text="Start" textFill="#e0d4ff">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbPendingTask" focusColor="#580d70" layoutX="29.0" layoutY="98.0" prefHeight="25.0" prefWidth="241.0" promptText="Pending Task IDs" style="-fx-prompt-text-fill: #580D70;" stylesheets="@style.css" unFocusColor="#580d70" />
+      <Separator layoutX="29.0" layoutY="164.0" prefHeight="19.0" prefWidth="671.0" />
+      <JFXComboBox fx:id="cmbProcessingTaskId" focusColor="#580d70" layoutX="31.0" layoutY="208.0" prefHeight="25.0" prefWidth="241.0" promptText="Processing Task IDs" style="-fx-prompt-text-fill: #580D70;" stylesheets="@style.css" unFocusColor="#580d70" />
+      <JFXButton fx:id="btnFinish" layoutX="452.0" layoutY="525.0" onAction="#btnFinish_OnAction" prefHeight="41.0" prefWidth="113.0" style="-fx-background-color: #580D70;" text="Finish" textFill="#e0d4ff">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtProducedQty" focusColor="#580d70" layoutX="29.0" layoutY="539.0" prefHeight="28.0" prefWidth="241.0" promptText="Produced Qty." style="-fx-text-inner-color: #580D70; -fx-prompt-text-fill: #580D70; -fx-font-size: 14;" unFocusColor="#580d70" />
+      <TableView fx:id="tblIngredients" layoutX="29.0" layoutY="374.0" prefHeight="145.0" prefWidth="671.0" style="-fx-background-color: #C295EB;" stylesheets="@style.css">
+         <columns>
+            <TableColumn prefWidth="121.0" text="Ingredient Id" />
+            <TableColumn prefWidth="425.0" text="Description" />
+            <TableColumn prefWidth="123.0" text="Qty." />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtProductId" focusColor="#580d70" layoutX="456.0" layoutY="215.0" prefHeight="28.0" prefWidth="232.0" promptText="Product Id" style="-fx-text-inner-color: #580D70; -fx-prompt-text-fill: #580D70; -fx-font-size: 14;" unFocusColor="#580d70" />
+      <JFXTextField fx:id="txtIngredientDes" focusColor="#580d70" layoutX="452.0" layoutY="260.0" prefHeight="28.0" prefWidth="241.0" promptText="Ingredient Description" style="-fx-text-inner-color: #580D70; -fx-prompt-text-fill: #580D70; -fx-font-size: 14;" unFocusColor="#580d70" />
+      <JFXComboBox fx:id="cmbIngredientId" focusColor="#580d70" layoutX="32.0" layoutY="261.0" prefHeight="25.0" prefWidth="241.0" promptText="Ingredient Id" style="-fx-prompt-text-fill: #580D70;" stylesheets="@style.css" unFocusColor="#580d70" />
+      <JFXButton fx:id="btnAdd" layoutX="451.0" layoutY="311.0" onAction="#btnAdd_OnAction" prefHeight="41.0" prefWidth="113.0" style="-fx-background-color: #580D70;" text="Add" textFill="#e0d4ff">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtQty" focusColor="#580d70" layoutX="31.0" layoutY="318.0" onAction="#txtQty_OnAction" prefHeight="28.0" prefWidth="241.0" promptText="Qty." style="-fx-text-inner-color: #580D70; -fx-prompt-text-fill: #580D70; -fx-font-size: 14;" unFocusColor="#580d70">
+         <tooltip>
+            <Tooltip text="Enter Qty &quot;kg or Litre&quot;" />
+         </tooltip></JFXTextField>
+    </children>
+</AnchorPane>
